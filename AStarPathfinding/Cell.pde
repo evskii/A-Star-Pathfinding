@@ -4,6 +4,8 @@ class Cell{
   int parentCol = 0;
   int parentRow = 0;
   
+  Cell parentCell;
+  
    float f = 0;
    float g = 0;
    float h = 0;

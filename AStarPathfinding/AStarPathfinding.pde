@@ -20,11 +20,13 @@ void setup(){
   size(500, 500);
   
   openList.add(startCell);
+  
+  CalculateG(startCell);
 }
 
 void draw(){
   clear(); //Clear the screen every frame
-  background(0); //Set background to be black
+  background(0); //Set background to be black 
   DrawGrid(); 
   
   //Draw in the start and dest cells
@@ -95,6 +97,10 @@ ArrayList<Cell> NeighbouringCells (Cell currentCell){
   Cell neighbour7 = new Cell(currentCell.col - 1, currentCell.row);
   toReturn.add(neighbour7);
   
+  for(int i = 0; i < toReturn.size(); i++){
+      toReturn.get(i).parentCell = currentCell;
+  }
+  
   return toReturn;
 }
 
@@ -112,6 +118,23 @@ boolean ValidCell(Cell toCheck){
   }else{
      return false; 
   }
+}
+
+int CalculateG(Cell currentCell){
+  int gCost = 0;
+  while(currentCell.parentCell != null){
+    gCost ++;
+    currentCell = currentCell.parentCell;
+  }
+  print("G: " + gCost);
+  return gCost;
+}
+
+
+int CalculateH(Cell currentCell){
+  int hCost = 0;
+  
+  return hCost;
 }
 
 void DrawGrid(){
