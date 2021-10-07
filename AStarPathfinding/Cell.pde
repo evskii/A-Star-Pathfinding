@@ -6,11 +6,13 @@ class Cell{
   
   Cell parentCell;
   
-   float f = 0;
-   float g = 0;
-   float h = 0;
+   int f = 0;
+   int g = 0;
+   int h = 0;
   
-   Cell(int tCol, int tRow, int pCol, int pRow, float fVal, float gVal, float hVal){
+  boolean invalid = false;
+  
+   Cell(int tCol, int tRow, int pCol, int pRow, int fVal, int gVal, int hVal){
      row = tRow;
      col = tCol;
      parentCol = pCol;
