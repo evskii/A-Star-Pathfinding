@@ -10,7 +10,7 @@ class Cell{
    int g = 0;
    int h = 0;
   
-  boolean invalid = false;
+  //boolean invalid = false;
   
    Cell(int tCol, int tRow, int pCol, int pRow, int fVal, int gVal, int hVal){
      row = tRow;
