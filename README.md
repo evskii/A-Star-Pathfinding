@@ -12,7 +12,7 @@ https://user-images.githubusercontent.com/55562147/137487559-090c16b5-c4bc-4d49-
 
 
     
-A* Resrouces I found extremely helpful:
+A* resources I found extremely helpful:
 
   https://medium.com/@nicholas.w.swift/easy-a-star-pathfinding-7e6689c7f7b2
   
